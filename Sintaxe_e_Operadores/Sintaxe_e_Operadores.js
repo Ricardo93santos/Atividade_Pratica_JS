@@ -1,10 +1,9 @@
-
 function comparandoNumeros(n1, n2){
   const primeiraFrase = criarPrimeiraFrase(n1, n2)
   const segundaFrase = criarSegundaFrase(n1, n2)
   return `${primeiraFrase} ${segundaFrase}`
-  
-}
+}//Função callback que monta a frase que será mostrada ao usuário
+
 function criarPrimeiraFrase(n1, n2){
   let naoIguais = ""
   let igual = n1 === n2
@@ -12,7 +11,8 @@ function criarPrimeiraFrase(n1, n2){
     naoIguais = "não"
   }
   return `Os números ${n1} e ${n2} ${naoIguais} são iguais.`
-}
+}//Função para criar primeira frase
+
 function criarSegundaFrase(n1, n2){
   const soma = n1 + n2
   let maiorMenor10 = "maior"
@@ -32,5 +32,6 @@ function criarSegundaFrase(n1, n2){
     return `Sua soma é ${soma}, que é maior que 10 e igual a 20.`
   }
   return `Sua soma é ${soma}, que é ${maiorMenor10} que 10 e ${maiorMenor20} que 20.`
-}
+}//Função para criar a segunda frase
+
 console.log(comparandoNumeros(1, 50))
